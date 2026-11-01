@@ -7,5 +7,5 @@ import { Component, signal } from '@angular/core';
   templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('recipe-box');
+  protected readonly title = signal('My Recipe Box');
 }
