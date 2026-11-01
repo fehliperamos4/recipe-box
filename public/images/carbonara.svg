@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" role="img" aria-labelledby="title description">
+  <title id="title">Espaguete à carbonara</title>
+  <desc id="description">Ilustração vista de cima de um prato de massa dourada, queijo, pimenta e pequenos pedaços de guanciale sobre uma mesa creme.</desc>
+  <defs>
+    <radialGradient id="table"><stop stop-color="#f6eedb"/><stop offset="1" stop-color="#e9ddc5"/></radialGradient>
+    <radialGradient id="plate"><stop offset=".72" stop-color="#fffefa"/><stop offset=".76" stop-color="#e9e8df"/><stop offset=".8" stop-color="#fffefa"/><stop offset="1" stop-color="#f5f3eb"/></radialGradient>
+    <linearGradient id="pasta" x2="0" y2="1"><stop stop-color="#f8d77f"/><stop offset="1" stop-color="#d9a449"/></linearGradient>
+    <g id="bacon"><rect x="-13" y="-6" width="26" height="12" rx="3" fill="#a55d43"/><path d="M-8-3H8" stroke="#dca383" stroke-width="3" stroke-linecap="round"/></g>
+  </defs>
+  <path fill="url(#table)" d="M0 0H800V520H0z"/>
+  <path d="M0 412 191 520H0z" fill="#d1d5bd" opacity=".6"/>
+  <path d="m0 435 146 85M0 464l97 56" stroke="#f2f1e5" stroke-width="4" opacity=".55"/>
+  <ellipse cx="407" cy="274" rx="204" ry="196" fill="#8d775b" opacity=".12"/>
+  <circle cx="400" cy="260" r="195" fill="url(#plate)"/>
+  <circle cx="400" cy="260" r="176" fill="none" stroke="#dfdfd1" stroke-width="1.5"/>
+  <ellipse cx="400" cy="262" rx="143" ry="140" fill="#edd09a"/>
+  <g fill="none" stroke="url(#pasta)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M303 208c-33 39 42 31 57 8s39-48 78-26 47 63 12 78-73-9-104 16-53 43-25 64 64-3 65-39-25-63 14-81 76 7 91 38-3 68-48 67-77 16-58 38 62 14 99-12"/>
+    <path d="M310 180c45-37 109-35 133-6s-19 61-58 55-70-4-90 22 4 61 40 59 59 21 49 47 32 45 66 25"/>
+    <path d="M480 188c28 13 52 51 40 80s-59 34-71 9 3-55-27-72-64-5-69 21 17 39 12 68-47 37-58 11"/>
+    <path d="M280 244c-17 42 19 98 51 112s45-6 34-32 8-53 38-50 17 41 45 49 53-5 64-24"/>
+    <path d="M338 159c-29 22 1 40 36 28s60-21 88 7 7 57-29 59-50 16-43 42 48 30 65 12 41-4 31 28-28 47-59 44"/>
+    <path d="M289 217c-11 31 26 56 52 37s61-14 70 14-23 42-16 70 35 25 54 9"/>
+    <path d="M492 220c43 47-6 80-37 66s-40-49-68-50-38 28-20 42 19 41-5 57"/>
+  </g>
+  <g fill="none" stroke="#ffedb4" stroke-width="3" stroke-linecap="round" opacity=".8">
+    <path d="M310 181c46-32 106-31 129-5M302 210c-20 25 18 28 42 9M282 244c-12 37 16 86 48 102M365 188c30-10 65-23 91 3M493 222c30 36 2 62-28 59M397 297c5 15 27 24 43 11M389 356c11 18 42 17 61 10"/>
+  </g>
+  <use href="#bacon" transform="translate(337 206) rotate(-23)"/>
+  <use href="#bacon" transform="translate(449 184) rotate(28)"/>
+  <use href="#bacon" transform="translate(477 271) rotate(-38)"/>
+  <use href="#bacon" transform="translate(376 304) rotate(20)"/>
+  <use href="#bacon" transform="translate(331 329) rotate(-42)"/>
+  <use href="#bacon" transform="translate(441 344) rotate(16)"/>
+  <g fill="#fff5d4">
+    <path d="m360 163 16-5 3 6-16 4zM407 209l18 4-3 6-17-5zM309 270l15-7 3 5-15 7zM415 326l17-6 2 6-16 5zM466 235l14 5-2 5-14-4zM351 287l16 1-1 5-15-1zM409 370l13 3-1 5-14-4z"/>
+  </g>
+  <g fill="#564635">
+    <circle cx="359" cy="214" r="2.3"/><circle cx="423" cy="188" r="2"/><circle cx="405" cy="247" r="2.6"/><circle cx="311" cy="248" r="2"/><circle cx="462" cy="302" r="2.4"/><circle cx="345" cy="307" r="2"/><circle cx="410" cy="347" r="2.2"/><circle cx="464" cy="213" r="1.8"/><circle cx="381" cy="170" r="1.7"/><circle cx="493" cy="257" r="2"/><circle cx="368" cy="354" r="1.8"/>
+  </g>
+  <g fill="#52754b"><path d="M402 274c-17-16-10-27 4-19 5 5 2 13-4 19Z"/><path d="M403 274c4-22 19-25 20-12-1 8-11 11-20 12Z"/><path d="M302 194c-9-7-7-17 1-13 5 4 3 9-1 13Z"/></g>
+</svg>

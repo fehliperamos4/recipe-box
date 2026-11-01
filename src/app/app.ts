@@ -1,10 +1,10 @@
-import { JsonPipe } from '@angular/common';
+import { JsonPipe, NgOptimizedImage } from '@angular/common';
 import { Component, computed, signal } from '@angular/core';
 import { CARBONARA_RECIPE, CAPRESE_RECIPE } from './mock-recipes';
 import { RecipeModel } from './models';
 
 @Component({
-  imports: [JsonPipe],
+  imports: [JsonPipe, NgOptimizedImage],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
