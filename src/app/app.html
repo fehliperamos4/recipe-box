@@ -5,4 +5,10 @@
   <button type="button" (click)="showCaprese()">Salada Caprese</button>
   <h2>{{ recipe().name }}</h2>
   <p>{{ recipe().description }}</p>
+  <div>
+    <button type="button" (click)="decreaseServings()" [disabled]="servings() === 1"
+      [attr.aria-label]="'Diminuir porções'">−</button>
+    <span aria-live="polite">Porções: {{ servings() }}</span>
+    <button type="button" (click)="increaseServings()" [attr.aria-label]="'Aumentar porções'">+</button>
+  </div>
 </main>
