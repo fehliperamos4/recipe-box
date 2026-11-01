@@ -1,6 +1,6 @@
 :host { display: block; min-width: 0; }
 .recipe-card { background: #fffef9; border: 1px solid #dfe3d8; border-radius: 18px; overflow: hidden; box-shadow: 0 8px 28px #273f2a05; }
-.recipe-image { width: 100%; height: auto; aspect-ratio: 800 / 360; object-fit: cover; display: block; background: #e8eadb; }
+.recipe-image { width: 100%; height: auto; display: block; background: #e8eadb; }
 .recipe-content { display: flex; flex-direction: column; padding: 30px 34px; gap: 24px; }
 .eyebrow { margin: 0 0 12px; color: #5c6d4d; font-size: 9px; font-weight: 800; letter-spacing: .18em; }
 .recipe-heading h2 { font: 500 clamp(27px, 3vw, 34px)/1.2 Georgia, serif; margin: 0 0 10px; letter-spacing: -.025em; }
