@@ -11,4 +11,6 @@
     <span aria-live="polite">Porções: {{ servings() }}</span>
     <button type="button" (click)="increaseServings()" [attr.aria-label]="'Aumentar porções'">+</button>
   </div>
+  <h3>Ingredientes</h3>
+  <pre>{{ adjustedIngredients() | json }}</pre>
 </main>
