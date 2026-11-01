@@ -1,5 +1,5 @@
 ﻿import { Component, signal } from '@angular/core';
-import { CARBONARA_RECIPE, CAPRESE_RECIPE } from '../mock-recipes';
+import { CARBONARA_RECIPE, MOCK_RECIPES } from '../mock-recipes';
 import { RecipeModel } from '../models';
 import { RecipeDetail } from '../recipe-detail/recipe-detail';
 
@@ -11,13 +11,10 @@ import { RecipeDetail } from '../recipe-detail/recipe-detail';
 })
 export class RecipeList {
   protected readonly title = signal('My Recipe Box');
+  protected readonly recipes = signal<RecipeModel[]>(MOCK_RECIPES);
   protected readonly recipe = signal<RecipeModel>(CARBONARA_RECIPE);
 
-  protected showCarbonara(): void {
-    this.recipe.set(CARBONARA_RECIPE);
-  }
-
-  protected showCaprese(): void {
-    this.recipe.set(CAPRESE_RECIPE);
+  protected selectRecipe(selected: RecipeModel): void {
+    this.recipe.set(selected);
   }
 }

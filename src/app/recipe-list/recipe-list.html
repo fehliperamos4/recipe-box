@@ -17,19 +17,16 @@
     <aside class="collection" aria-labelledby="collection-title">
       <div class="section-heading">
         <h2 id="collection-title">Suas receitas</h2>
-        <span class="recipe-count">02</span>
+        <span class="recipe-count">{{ recipes().length }}</span>
       </div>
       <div class="recipe-picker">
-        <button type="button" class="recipe-option" [class.is-selected]="recipe().id === 1"
-          [attr.aria-pressed]="recipe().id === 1" (click)="showCarbonara()">
-          <span class="recipe-number" aria-hidden="true">01</span>
-          <span><strong>Spaghetti Carbonara</strong><span class="option-caption">Um clássico italiano</span></span>
-        </button>
-        <button type="button" class="recipe-option" [class.is-selected]="recipe().id === 2"
-          [attr.aria-pressed]="recipe().id === 2" (click)="showCaprese()">
-          <span class="recipe-number" aria-hidden="true">02</span>
-          <span><strong>Salada Caprese</strong><span class="option-caption">Leve e cheia de frescor</span></span>
-        </button>
+        @for (item of recipes(); track item.id; let index = $index) {
+          <button type="button" class="recipe-option" [class.is-selected]="recipe().id === item.id"
+            [attr.aria-pressed]="recipe().id === item.id" (click)="selectRecipe(item)">
+            <span class="recipe-number" aria-hidden="true">0{{ index + 1 }}</span>
+            <span><strong>{{ item.name }}</strong><span class="option-caption">{{ item.ingredients.length }} ingredientes</span></span>
+          </button>
+        }
       </div>
       <p class="collection-tip">Boa comida começa com ingredientes simples.</p>
     </aside>

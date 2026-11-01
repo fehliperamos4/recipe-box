@@ -1,9 +1,9 @@
-import { JsonPipe, NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { Component, computed, input, signal } from '@angular/core';
 import { RecipeModel } from '../models';
 
 @Component({
-  imports: [JsonPipe, NgOptimizedImage],
+  imports: [NgOptimizedImage],
   selector: 'app-recipe-detail',
   styleUrl: './recipe-detail.css',
   templateUrl: './recipe-detail.html',

@@ -20,7 +20,16 @@
     </section>
     <section class="ingredients-panel" aria-labelledby="ingredients-title">
       <div class="ingredients-heading"><h3 id="ingredients-title">Ingredientes</h3><span>NA MEDIDA CERTA</span></div>
-      <pre>{{ adjustedIngredients() | json }}</pre>
+      <ul class="ingredient-list">
+        @for (ingredient of adjustedIngredients(); track ingredient.name) {
+          <li>
+            <span>{{ ingredient.name }}</span>
+            <span class="ingredient-quantity">{{ ingredient.quantity }} {{ ingredient.unit }}</span>
+          </li>
+        } @empty {
+          <li class="empty-ingredients">Esta receita ainda não tem ingredientes.</li>
+        }
+      </ul>
     </section>
     <p class="recipe-note">Separe os ingredientes antes de começar e aproveite o preparo.</p>
   </div>
