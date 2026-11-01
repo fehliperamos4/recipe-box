@@ -24,7 +24,13 @@
           <button type="button" class="recipe-option" [class.is-selected]="recipe().id === item.id"
             [attr.aria-pressed]="recipe().id === item.id" (click)="selectRecipe(item)">
             <span class="recipe-number" aria-hidden="true">0{{ index + 1 }}</span>
-            <span><strong>{{ item.name }}</strong><span class="option-caption">{{ item.ingredients.length }} ingredientes</span></span>
+            <span class="option-content">
+              <strong>{{ item.name }}</strong>
+              <span class="option-caption">{{ item.ingredients.length }} ingredientes</span>
+              @if (item.isFavorite) {
+                <span class="favorite-label"><span aria-hidden="true">★</span> Favorita</span>
+              }
+            </span>
           </button>
         }
       </div>

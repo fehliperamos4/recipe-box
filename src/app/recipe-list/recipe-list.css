@@ -20,6 +20,8 @@ h1 { margin: 14px 0 12px; font: 500 clamp(36px, 5vw, 52px)/1.12 Georgia, serif; 
 .recipe-number { font: italic 22px Georgia, serif; color: #5a704e; }
 .recipe-option strong { display: block; font-size: 13px; line-height: 1.5; }
 .option-caption { display: block; margin-top: 5px; color: #5d695e; font-size: 11px; line-height: 1.5; }
+.option-content { min-width: 0; }
+.favorite-label { display: inline-flex; align-items: center; gap: 4px; margin-top: 8px; padding: 3px 7px; border-radius: 5px; font-size: 10px; color: #765714; background: #fff3cf; }
 .collection-tip { margin: 26px 14px; max-width: 190px; color: #66715f; font: italic 15px/1.8 Georgia, serif; }
 .page-footer { padding: 34px 0; text-align: center; color: #65705f; font-size: 11px; }
 @media (max-width: 780px) {

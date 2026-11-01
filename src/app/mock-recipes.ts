@@ -5,6 +5,7 @@ export const CARBONARA_RECIPE: RecipeModel = {
   name: 'Spaghetti Carbonara',
   description: 'Um clássico italiano: massa, queijo e um molho cremoso feito com gemas.',
   imgUrl: 'images/carbonara.svg',
+  isFavorite: true,
   ingredients: [
     { name: 'Spaghetti', quantity: 100, unit: 'g' },
     { name: 'Guanciale', quantity: 50, unit: 'g' },
@@ -19,6 +20,7 @@ export const CAPRESE_RECIPE: RecipeModel = {
   name: 'Salada Caprese',
   description: 'Tomate, muçarela e manjericão. Poucos ingredientes, muito sabor.',
   imgUrl: 'images/caprese.svg',
+  isFavorite: false,
   ingredients: [
     { name: 'Tomate', quantity: 2, unit: 'un.' },
     { name: 'Muçarela de búfala', quantity: 100, unit: 'g' },
