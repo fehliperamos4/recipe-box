@@ -1,0 +1,17 @@
+﻿<main>
+  <h1>{{ title() }}</h1>
+  <p>Sua caixa de receitas começa aqui.</p>
+  <button type="button" (click)="showCarbonara()">Spaghetti Carbonara</button>
+  <button type="button" (click)="showCaprese()">Salada Caprese</button>
+  <h2>{{ recipe().name }}</h2>
+  <img [ngSrc]="recipe().imgUrl" [alt]="'Ilustração de ' + recipe().name" width="800" height="520" priority>
+  <p>{{ recipe().description }}</p>
+  <div>
+    <button type="button" (click)="decreaseServings()" [disabled]="servings() === 1"
+      [attr.aria-label]="'Diminuir porções'">−</button>
+    <span aria-live="polite">Porções: {{ servings() }}</span>
+    <button type="button" (click)="increaseServings()" [attr.aria-label]="'Aumentar porções'">+</button>
+  </div>
+  <h3>Ingredientes</h3>
+  <pre>{{ adjustedIngredients() | json }}</pre>
+</main>
