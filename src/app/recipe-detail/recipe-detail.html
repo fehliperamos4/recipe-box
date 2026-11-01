@@ -1,13 +1,27 @@
-﻿<article>
-  <h2>{{ recipe().name }}</h2>
-  <img [ngSrc]="recipe().imgUrl" [alt]="'Ilustração de ' + recipe().name" width="800" height="520" priority>
-  <p>{{ recipe().description }}</p>
-  <div>
-    <button type="button" (click)="decreaseServings()" [disabled]="servings() === 1"
-      [attr.aria-label]="'Diminuir porções'">−</button>
-    <span aria-live="polite">Porções: {{ servings() }}</span>
-    <button type="button" (click)="increaseServings()" [attr.aria-label]="'Aumentar porções'">+</button>
+﻿<article class="recipe-card" aria-labelledby="recipe-name">
+  <img class="recipe-image" [ngSrc]="recipe().imgUrl" [alt]="'Ilustração de ' + recipe().name"
+    width="800" height="520" priority>
+  <div class="recipe-content">
+    <header class="recipe-heading">
+      <p class="eyebrow">HOJE NO SEU CARDÁPIO</p>
+      <h2 id="recipe-name">{{ recipe().name }}</h2>
+      <p class="recipe-description">{{ recipe().description }}</p>
+    </header>
+    <section class="servings-panel" aria-labelledby="servings-title">
+      <div><h3 id="servings-title">À sua medida</h3><p>Ajuste a receita para a sua mesa.</p></div>
+      <div class="servings-control">
+        <button type="button" (click)="decreaseServings()" [disabled]="servings() === 1"
+          [attr.aria-label]="'Diminuir porções'">−</button>
+        <span class="servings-value" aria-live="polite" aria-atomic="true">
+          <strong>{{ servings() }}</strong><span>Porções</span>
+        </span>
+        <button type="button" (click)="increaseServings()" [attr.aria-label]="'Aumentar porções'">+</button>
+      </div>
+    </section>
+    <section class="ingredients-panel" aria-labelledby="ingredients-title">
+      <div class="ingredients-heading"><h3 id="ingredients-title">Ingredientes</h3><span>NA MEDIDA CERTA</span></div>
+      <pre>{{ adjustedIngredients() | json }}</pre>
+    </section>
+    <p class="recipe-note">Separe os ingredientes antes de começar e aproveite o preparo.</p>
   </div>
-  <h3>Ingredientes</h3>
-  <pre>{{ adjustedIngredients() | json }}</pre>
 </article>

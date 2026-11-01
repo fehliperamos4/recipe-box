@@ -1,7 +1,39 @@
-﻿<main>
-  <h1>{{ title() }}</h1>
-  <p>Sua caixa de receitas começa aqui.</p>
-  <button type="button" (click)="showCarbonara()">Spaghetti Carbonara</button>
-  <button type="button" (click)="showCaprese()">Salada Caprese</button>
-  <app-recipe-detail [recipe]="recipe()" />
+﻿<main class="page">
+  <header class="page-header">
+    <a class="brand" href="#collection" aria-label="Smart Recipe Box, ir para as receitas">
+      <span class="brand-mark" aria-hidden="true">r.</span>
+      <span>SMART RECIPE BOX</span>
+    </a>
+    <span class="header-note">Um lugar para suas boas receitas.</span>
+  </header>
+
+  <section class="introduction" aria-labelledby="page-title">
+    <p class="eyebrow">DA SUA COZINHA, COM CARINHO</p>
+    <h1 id="page-title">{{ title() }}</h1>
+    <p>Escolha uma receita, ajuste as porções e prepare algo especial.</p>
+  </section>
+
+  <div class="recipe-layout" id="collection">
+    <aside class="collection" aria-labelledby="collection-title">
+      <div class="section-heading">
+        <h2 id="collection-title">Suas receitas</h2>
+        <span class="recipe-count">02</span>
+      </div>
+      <div class="recipe-picker">
+        <button type="button" class="recipe-option" [class.is-selected]="recipe().id === 1"
+          [attr.aria-pressed]="recipe().id === 1" (click)="showCarbonara()">
+          <span class="recipe-number" aria-hidden="true">01</span>
+          <span><strong>Spaghetti Carbonara</strong><span class="option-caption">Um clássico italiano</span></span>
+        </button>
+        <button type="button" class="recipe-option" [class.is-selected]="recipe().id === 2"
+          [attr.aria-pressed]="recipe().id === 2" (click)="showCaprese()">
+          <span class="recipe-number" aria-hidden="true">02</span>
+          <span><strong>Salada Caprese</strong><span class="option-caption">Leve e cheia de frescor</span></span>
+        </button>
+      </div>
+      <p class="collection-tip">Boa comida começa com ingredientes simples.</p>
+    </aside>
+    <app-recipe-detail [recipe]="recipe()" />
+  </div>
+  <footer class="page-footer">Guarde sabores. Compartilhe bons momentos.</footer>
 </main>

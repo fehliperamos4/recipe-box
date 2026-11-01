@@ -1,0 +1,31 @@
+:host { display: block; min-width: 0; }
+.recipe-card { background: #fffef9; border: 1px solid #dfe3d8; border-radius: 18px; overflow: hidden; box-shadow: 0 8px 28px #273f2a05; }
+.recipe-image { width: 100%; height: auto; aspect-ratio: 800 / 360; object-fit: cover; display: block; background: #e8eadb; }
+.recipe-content { display: flex; flex-direction: column; padding: 30px 34px; gap: 24px; }
+.eyebrow { margin: 0 0 12px; color: #5c6d4d; font-size: 9px; font-weight: 800; letter-spacing: .18em; }
+.recipe-heading h2 { font: 500 clamp(27px, 3vw, 34px)/1.2 Georgia, serif; margin: 0 0 10px; letter-spacing: -.025em; }
+.recipe-description { font-size: 13px; line-height: 1.8; color: #5d695e; margin: 0; max-width: 460px; }
+.servings-panel { display: flex; justify-content: space-between; align-items: center; gap: 16px; background: #f0f2e8; border-radius: 12px; padding: 18px 20px; }
+h3 { font-size: 14px; margin: 0; }
+.servings-panel p { font-size: 11px; line-height: 1.6; color: #5d695e; margin: 6px 0 0; }
+.servings-control { display: flex; align-items: center; gap: 10px; }
+.servings-control button { border: 1px solid #d2dac8; background: #fffef9; color: #294737; border-radius: 50%; width: 34px; height: 34px; cursor: pointer; font-size: 20px; }
+.servings-control button:hover:enabled { background: #dce7cd; }
+.servings-control button:disabled { opacity: .4; cursor: default; }
+.servings-value { min-width: 42px; text-align: center; }
+.servings-value strong { display: block; font-size: 18px; }
+.servings-value > span { font-size: 9px; color: #5d695e; }
+.ingredients-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid #e3e6dc; }
+.ingredients-heading > span { font-size: 8px; color: #5d695e; font-weight: 700; letter-spacing: .12em; }
+pre { overflow: auto; font-size: 12px; }
+.ingredient-list { list-style: none; margin: 0; padding: 0; }
+.ingredient-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 15px 0; border-bottom: 1px solid #eceee5; font-size: 13px; line-height: 1.6; }
+.ingredient-quantity { flex-shrink: 0; color: #3c5835; font-weight: 700; text-align: right; }
+.empty-ingredients { font-size: 13px; color: #5d695e; }
+.recipe-note { font: italic 13px/1.8 Georgia, serif; color: #63715b; margin: 0; }
+@media (max-width: 480px) {
+  .recipe-content { padding: 24px 20px; gap: 22px; }
+  .servings-panel { align-items: flex-start; flex-direction: column; }
+  .servings-control { align-self: flex-end; }
+  .ingredient-list li { font-size: 12px; gap: 10px; }
+}
