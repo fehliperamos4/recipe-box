@@ -1,4 +1,6 @@
 import { Component, signal } from '@angular/core';
+import { CARBONARA_RECIPE, CAPRESE_RECIPE } from './mock-recipes';
+import { RecipeModel } from './models';
 
 @Component({
   imports: [],
@@ -8,12 +10,13 @@ import { Component, signal } from '@angular/core';
 })
 export class App {
   protected readonly title = signal('My Recipe Box');
+  protected readonly recipe = signal<RecipeModel>(CARBONARA_RECIPE);
 
   protected showCarbonara(): void {
-    console.log('Receita selecionada: Spaghetti Carbonara');
+    this.recipe.set(CARBONARA_RECIPE);
   }
 
   protected showCaprese(): void {
-    console.log('Receita selecionada: Salada Caprese');
+    this.recipe.set(CAPRESE_RECIPE);
   }
 }
