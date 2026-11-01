@@ -5,20 +5,16 @@ describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App],
-    })
-      .compileComponents();
+    }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(App);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it('should render title', async () => {
+  it('renders the page and initial recipe through the nested components', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('My Recipe Box');
+    const page = fixture.nativeElement as HTMLElement;
+
+    expect(page.querySelector('main h1')?.textContent).toBe('My Recipe Box');
+    expect(page.querySelector('app-recipe-detail h2')?.textContent).toBe('Spaghetti Carbonara');
+    expect(page.querySelectorAll('.ingredient-list li')).toHaveLength(5);
   });
 });
